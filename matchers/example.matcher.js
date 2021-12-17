@@ -1,5 +1,5 @@
 function getName(repoFolder) {
-    return `tomas namn`
+    return require(`${repoFolder}/package.json`).name
 }
 
 function getStartCommand(repoFolder) {
@@ -7,7 +7,11 @@ function getStartCommand(repoFolder) {
 }
 
 function isMatching(repoFolder) {
-    return true;
+    try {
+        return require(`${repoFolder}/package.json`).scripts["start"] != undefined
+    } catch {
+        return false;
+    }
 }
 
 module.exports = { getName, getStartCommand, isMatching }
