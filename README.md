@@ -1,6 +1,7 @@
 A demo of [Serverless Server Spawner](https://github.com/tomasbjerre/serverless-server-spawner)
 
 Start the server with:
+
 ```sh
 npx serverless-server-spawner \
   --matchers-folder `pwd`/matchers
