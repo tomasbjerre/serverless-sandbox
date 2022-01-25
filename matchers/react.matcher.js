@@ -1,7 +1,6 @@
 function isMatching(repoFolder) {
   try {
-    return require(`${repoFolder}/package.json`).scripts.start != undefined
-     && require(`${repoFolder}/package.json`).scripts.setup == undefined;;
+    return require(`${repoFolder}/package.json`).scripts.setup != undefined;
   } catch (e) {
     console.log(e);
     return false;
@@ -13,7 +12,7 @@ function getName(repoFolder) {
 }
 
 function getPrepareCommand(repoFolder) {
-  return `npm install`;
+  return `npm install && npm run setup`;
 }
 
 function preStart(repoFolder, env) {
