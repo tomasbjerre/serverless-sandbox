@@ -25,4 +25,15 @@ function getStartCommand(repoFolder) {
   return `npm run start`;
 }
 
-module.exports = { getName, getStartCommand, getPrepareCommand, isMatching, preStart };
+function isReady(runLogContent,serverPort) {
+  // Optionally check log to see if server ready.
+  return true;
+
+  //return new RegExp(`https?://(127.0.0.1|localhost):${serverPort}`,'g')
+  //  .test(runLogContent)
+
+  //return new RegExp(`${serverPort}`,'g')
+  //  .test(runLogContent)
+}
+
+module.exports = { getName, getStartCommand, getPrepareCommand, isMatching, preStart, isReady };
