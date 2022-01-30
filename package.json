@@ -1,0 +1,11 @@
+{
+  "name": "serverless-sandbox",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "serverless-server-spawner"
+  },
+  "license": "Apache 2",
+  "devDependencies": {
+    "serverless-server-spawner": "^1.0.0"
+  }
+}
